@@ -39,7 +39,7 @@ export default async function HomePage() {
 
   const stats = [
     { value: "2004", label: "Where our journey began, in Pokhara" },
-    { value: "4,500+", label: "Students supported in the UK" },
+    { value: "30,000+", label: "Students helped since 2009" },
     { value: String(groups.length), label: "Sectors across the UK and Nepal" },
     { value: String(portfolio.length), label: "Companies and projects" },
   ];

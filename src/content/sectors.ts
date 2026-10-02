@@ -13,7 +13,7 @@ export const sectors: Sector[] = [
     accent: "bronze",
     summary: "International education services in the UK, Kathmandu and Pokhara, where the Ample journey began.",
     intro:
-      "Education consultancy is where the Ample story began. Pramod Adhikari started as an office boy at an education consultancy in Pokhara in 2004 and opened his own in 2009. Today Ample International Education has branch offices in London, Kathmandu and Pokhara, and has supported more than 4,500 students whose colleges closed mid-course.",
+      "Education consultancy is where the Ample story began. Pramod Adhikari started as an office boy at an education consultancy in Pokhara in 2004 and opened his own in 2009. Today Ample International Education has branch offices in London, Kathmandu and Pokhara. Since 2009 it has helped more than 30,000 students, including more than 4,500 in the UK whose colleges closed mid-course.",
     ampleInvolvement: [
       "Ample International Education, one company with three branch offices: London, Kathmandu and Pokhara.",
       "London branch: supporting international students living in the United Kingdom since the end of 2010.",
@@ -49,7 +49,7 @@ export const sectors: Sector[] = [
     seo: {
       title: "Education Consultancy in the UK & Nepal | Ample Associates",
       description:
-        "Ample International Education in the UK, Kathmandu and Pokhara: where the Ample journey began in 2009, supporting more than 4,500 students.",
+        "Ample International Education in the UK, Kathmandu and Pokhara: where the Ample journey began in 2009, helping more than 30,000 students.",
     },
   },
   {

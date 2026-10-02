@@ -70,7 +70,7 @@ export default async function AboutPage() {
   const facts = [
     { label: "Pokhara", value: "2004", note: "Where the journey began, at Orbit International" },
     { label: "United Kingdom", value: "2010", note: "Came to the UK for further study" },
-    { label: "Students", value: "4,500+", note: "Supported when their colleges closed mid-course", accent: true },
+    { label: "Students", value: "30,000+", note: "Helped by Ample International Education since 2009", accent: true },
     { label: "Sectors", value: String(sectors.length), note: "From education to a financial channel" },
   ];
 

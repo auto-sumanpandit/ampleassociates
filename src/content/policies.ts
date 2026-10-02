@@ -122,7 +122,7 @@ export const policies: Policy[] = [
       {
         heading: "What we collect",
         paragraphs: [
-          "This website has no forms and no user accounts. We only receive personal information when you contact us directly, for example by email or phone, and it is limited to what you choose to send, such as your name, contact details and message.",
+          "This website has no user accounts. We receive personal information only when you contact us, through the contact form or by email, and it is limited to what you choose to send: your name, email address, country (optional), area of interest and message. The form also records, for spam protection only, the time it was opened and your internet address for rate limiting; neither is stored.",
           "If you accept analytics cookies, we also receive anonymous usage data (see below).",
         ],
       },

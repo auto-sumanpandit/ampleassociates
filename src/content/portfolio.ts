@@ -64,7 +64,7 @@ export const portfolio: PortfolioEntity[] = [
     relationshipType: "Ample Associates Company",
     relationshipStatus: "CLIENT_CONFIRMED",
     description:
-      "International education consultancy with branch offices in London, Kathmandu and Pokhara, where the Ample story started. In the UK it has supported international students since the end of 2010, including more than 4,500 students whose colleges closed mid-course.",
+      "International education consultancy, started in 2009, with branch offices in London, Kathmandu and Pokhara, where the Ample story started. It has helped more than 30,000 students so far, including more than 4,500 in the UK whose colleges closed mid-course.",
     website: "https://www.ampleedu.com",
     websiteVerified: true,
     logo: ampleEducationLogo,

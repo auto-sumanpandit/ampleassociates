@@ -3,7 +3,7 @@
   // Static site on Workers static assets. Build first: npm run build:static
   "name": "ampleassociates",
   "compatibility_date": "2026-09-25",
-  // Redirects www and http to https://ampleassociates.com, then serves the static build.
+  // Redirects www and http to https://ampleassociates.com, handles POST /api/contact, then serves the static build.
   "main": "./worker/index.js",
   "assets": {
     "directory": "./dist",
@@ -17,12 +17,20 @@
       // Deployed at https://ampleassociates-staging.<account-subdomain>.workers.dev
       "name": "ampleassociates-staging",
       "workers_dev": true,
+      // Contact form: can only deliver to this verified Email Routing destination.
+      "send_email": [{ "name": "CONTACT_EMAIL", "destination_address": "pramod@ampleedu.com" }],
+      "vars": { "CONTACT_TO": "pramod@ampleedu.com" },
+      "ratelimits": [{ "name": "CONTACT_LIMITER", "namespace_id": "1001", "simple": { "limit": 5, "period": 60 } }],
     },
     "production": {
       // https://ampleassociates.com. The domain's DNS zone must be on the same Cloudflare account.
       // Deploy with: npm run deploy:production (builds with indexing allowed).
       "name": "ampleassociates",
       "workers_dev": false,
+      // Contact form: can only deliver to this verified Email Routing destination.
+      "send_email": [{ "name": "CONTACT_EMAIL", "destination_address": "pramod@ampleedu.com" }],
+      "vars": { "CONTACT_TO": "pramod@ampleedu.com" },
+      "ratelimits": [{ "name": "CONTACT_LIMITER", "namespace_id": "1002", "simple": { "limit": 5, "period": 60 } }],
       "routes": [
         { "pattern": "ampleassociates.com", "custom_domain": true },
         { "pattern": "www.ampleassociates.com", "custom_domain": true },

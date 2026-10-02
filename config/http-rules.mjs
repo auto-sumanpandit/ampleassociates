@@ -14,7 +14,7 @@ export function contentSecurityPolicy({ isDev = false } = {}) {
     "font-src 'self'",
     "connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://*.google-analytics.com",
     "frame-src 'none'",
-    "form-action 'none'",
+    "form-action 'self'",
     "base-uri 'self'",
     "frame-ancestors 'none'",
     "object-src 'none'",

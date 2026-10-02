@@ -7,11 +7,12 @@ import { ArrowLink, ButtonLink } from "@/components/ui/Button";
 import { VerificationBadge } from "@/components/ui/StatusBadge";
 import { Icon, type IconName } from "@/components/ui/Icon";
 import { CopyEmailButton } from "./_components/CopyEmailButton";
+import { ContactForm } from "./_components/ContactForm";
 
 export const metadata = buildMetadata({
   title: "Contact Ample Associates | Projects & Partnerships in Nepal",
   description:
-    "Email Ample Associates at contact@ampleassociates.com about our projects, investing through Back2Nepal or a partnership in the UK and Nepal.",
+    "Contact Ample Associates by form or at contact@ampleassociates.com about our projects, investing through Back2Nepal or a partnership in the UK and Nepal.",
   path: "/contact/",
 });
 
@@ -115,8 +116,8 @@ export default function ContactPage() {
               </div>
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                 <CopyEmailButton email={email} className="w-full sm:w-auto" />
-                <ButtonLink href={`mailto:${email}`} variant="onDarkOutline" mobileFull withArrow>
-                  Write an email
+                <ButtonLink href="#enquiry" variant="onDarkOutline" mobileFull withArrow>
+                  Use the form
                 </ButtonLink>
               </div>
             </div>
@@ -156,31 +157,37 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* 01 What to include */}
-      <section className="relative bg-mist-100 py-24 md:py-32">
+      {/* 01 Contact form */}
+      <section id="enquiry" className="relative scroll-mt-28 bg-mist-100 py-24 md:py-32">
         <GhostNumber n="01" />
-        <div className="container-page relative grid gap-12 lg:grid-cols-12 lg:gap-8">
-          <SectionHeading
-            className="lg:col-span-5"
-            label="Before you write"
-            title={
-              <>
-                What to include <span className="font-light">in your email</span>
-              </>
-            }
-            intro="A few details help us pass your message to the right person in the UK or Nepal."
-          />
-          <ul className="grid gap-4 sm:grid-cols-2 lg:col-span-7">
-            {include.map((item) => (
-              <li key={item.title} className="reveal flex flex-col rounded-2xl bg-white p-7 shadow-lift">
-                <span className="inline-flex size-12 items-center justify-center rounded-xl bg-mist-200 text-brand-600">
-                  <Icon name={item.icon} className="size-6" />
-                </span>
-                <h3 className="mt-5 text-lg font-semibold text-ink">{item.title}</h3>
-                <p className="mt-2 leading-relaxed text-ink-muted">{item.body}</p>
-              </li>
-            ))}
-          </ul>
+        <div className="container-page relative grid gap-12 lg:grid-cols-12 lg:gap-12">
+          <div className="lg:col-span-5">
+            <SectionHeading
+              label="Send a message"
+              title={
+                <>
+                  Write to us <span className="font-light">here.</span>
+                </>
+              }
+              intro="Your message goes straight to our team. A few details help us pass it to the right person in the UK or Nepal."
+            />
+            <ul className="mt-10 grid gap-5">
+              {include.map((item) => (
+                <li key={item.title} className="flex gap-4">
+                  <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-white text-brand-600 shadow-lift">
+                    <Icon name={item.icon} className="size-5" />
+                  </span>
+                  <div>
+                    <h3 className="font-semibold text-ink">{item.title}</h3>
+                    <p className="mt-1 text-[0.9375rem] leading-relaxed text-ink-muted">{item.body}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="reveal lg:col-span-7">
+            <ContactForm email={email} />
+          </div>
         </div>
       </section>
 
