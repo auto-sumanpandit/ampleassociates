@@ -3,8 +3,12 @@
   // Static site on Workers static assets. Build first: npm run build:static
   "name": "ampleassociates",
   "compatibility_date": "2026-09-25",
+  // Redirects www and http to https://ampleassociates.com, then serves the static build.
+  "main": "./worker/index.js",
   "assets": {
     "directory": "./dist",
+    "binding": "ASSETS",
+    "run_worker_first": true,
     "html_handling": "auto-trailing-slash",
     "not_found_handling": "404-page",
   },

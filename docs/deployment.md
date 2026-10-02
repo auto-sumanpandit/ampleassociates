@@ -46,7 +46,7 @@ Known differences from Node hosting: the trailing-slash redirect (`/about` → `
 
 Roll back: `npx wrangler rollback --env staging`. Remove: `npx wrangler delete --env staging`.
 
-## Production on Cloudflare (ready, not yet deployed)
+## Production on Cloudflare (live since 2 Oct 2026)
 
 Production uses the same static build as staging, on the `production` environment in `wrangler.jsonc` (Worker `ampleassociates`, custom domains `ampleassociates.com` and `www.ampleassociates.com`).
 
@@ -57,7 +57,7 @@ npm run deploy:production     # = build with NEXT_PUBLIC_ALLOW_INDEXING=true and
 Before the first production deploy:
 
 1. Add the `ampleassociates.com` zone to the same Cloudflare account as staging (Automationsuman2025@gmail.com's Account) and switch the domain's nameservers to Cloudflare. Custom domains only attach to zones on that account.
-2. Add a Cloudflare **Redirect Rule**: `www.ampleassociates.com/*` → `https://ampleassociates.com/${1}` (301), so there is one canonical host. Canonical tags already point to the apex.
+2. One canonical form, `https://ampleassociates.com` (no www): `worker/index.js` runs in front of the static assets and 301-redirects every `www.` and `http://` request to it, keeping path and query. No dashboard rule is needed.
 3. Optional: set `NEXT_PUBLIC_GA_MEASUREMENT_ID` in the shell before deploying to enable consent-gated Google Analytics.
 
 Production differs from staging only in indexing: `robots.txt` allows crawling and lists `https://ampleassociates.com/sitemap.xml`, and no `X-Robots-Tag: noindex` header is sent. Roll back with `npx wrangler rollback --env production`.
@@ -84,9 +84,9 @@ Set in `next.config.ts`: CSP (self plus Google Analytics only; `form-action 'non
 - [x] A-list launch blockers in [`content-verification-needed.md`](content-verification-needed.md) resolved (brand name, email, addresses, legal pages reviewed, 2 Oct 2026). Open by the client's choice: UK financial-promotion review of the Back2Nepal wording.
 - [x] `npm run check` passes (typecheck, lint, build); GitHub Actions runs the same on every push
 - [x] SEO audit clean (`npm start`, then `npm run audit:seo`)
-- [ ] `ampleassociates.com` zone on the Cloudflare account; www → apex redirect rule
-- [ ] `npm run deploy:production`
-- [ ] `https://ampleassociates.com/robots.txt` allows crawling and lists the sitemap
+- [x] `ampleassociates.com` zone on the Cloudflare account; www and http redirect to https://ampleassociates.com (worker/index.js)
+- [x] `npm run deploy:production` (2 Oct 2026)
+- [x] `https://ampleassociates.com/robots.txt` allows crawling and lists the sitemap
 - [ ] Validate schema with the Google Rich Results Test (home, /investments/ample-homes-pokhara/, one article, /leadership/)
 - [ ] Lighthouse on mobile: home, /portfolio/, /investments/ample-homes-pokhara/
 - [ ] Verify the property in Google Search Console, submit `sitemap.xml`
