@@ -1,0 +1,46 @@
+{
+  "name": "ampleassociates-web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "typecheck": "next typegen && tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "audit:seo": "node scripts/seo-audit.mjs http://localhost:3000",
+    "seo:on-page-map": "node scripts/on-page-map.mjs http://localhost:3000",
+    "check": "npm run typecheck && npm run lint && npm run build",
+    "build:static": "node scripts/build-static.mjs",
+    "deploy:staging": "npm run build:static && wrangler deploy --env staging",
+    "deploy:production": "node scripts/deploy-production.mjs",
+    "brand:assets": "node scripts/generate-brand-assets.mjs"
+  },
+  "dependencies": {
+    "@phosphor-icons/react": "^2.1.10",
+    "next": "16.3.6",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "server-only": "^0.0.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "dotted-map": "^3.1.0",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.6",
+    "prettier": "^3.9.9",
+    "prettier-plugin-tailwindcss": "^0.8.1",
+    "sharp": "^0.35.4",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "wrangler": "^4.140.0"
+  },
+  "engines": {
+    "node": ">=20.9"
+  }
+}

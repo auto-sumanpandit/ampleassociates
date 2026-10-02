@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">Ample Associates logo</title>
+  <desc id="desc">Blue and cyan stylised A icon with Ample Associates wordmark.</desc>
+
+  <defs>
+    <linearGradient id="gradBlue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B4EA2"/>
+      <stop offset="55%" stop-color="#126BD6"/>
+      <stop offset="100%" stop-color="#1E88E5"/>
+    </linearGradient>
+    <linearGradient id="gradCyan" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00C2CB"/>
+      <stop offset="100%" stop-color="#1E88E5"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Icon -->
+  <g transform="translate(48 40)">
+    <!-- Main left stroke -->
+    <path d="M70 280 L210 35 L250 105 L132 312 Z" fill="url(#gradBlue)"/>
+    <!-- Upper right facet -->
+    <path d="M210 35 L320 220 L258 219 L225 163 L250 105 Z" fill="url(#gradCyan)"/>
+    <!-- Lower right leg -->
+    <path d="M258 219 L320 220 L365 306 L290 306 L245 226 Z" fill="url(#gradBlue)"/>
+    <!-- White inner cut -->
+    <path d="M198 128 L164 192 L236 192 Z" fill="#ffffff"/>
+    <!-- Sweeping arc -->
+    <path d="M78 286 C145 225, 238 190, 362 181 C300 200, 230 232, 154 288 Z" fill="#ffffff"/>
+    <path d="M82 301 C154 247, 246 213, 367 197 C309 223, 240 257, 157 313 Z" fill="url(#gradCyan)"/>
+  </g>
+
+  <!-- Wordmark -->
+  <g transform="translate(470 108)">
+    <text x="0" y="95"
+          font-family="Inter, Montserrat, Arial, Helvetica, sans-serif"
+          font-size="112"
+          font-weight="700"
+          letter-spacing="3"
+          fill="#0B4EA2">AMPLE</text>
+
+    <text x="4" y="165"
+          font-family="Inter, Montserrat, Arial, Helvetica, sans-serif"
+          font-size="43"
+          font-weight="500"
+          letter-spacing="16"
+          fill="#1E88E5">ASSOCIATES</text>
+
+    <text x="4" y="224"
+          font-family="Inter, Montserrat, Arial, Helvetica, sans-serif"
+          font-size="22"
+          font-weight="500"
+          letter-spacing="5"
+          fill="#29466B">PEOPLE  |  PARTNERSHIPS  |  PROGRESS</text>
+  </g>
+</svg>

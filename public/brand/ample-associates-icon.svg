@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 420 420" role="img" aria-labelledby="title desc">
+  <title id="title">Ample Associates icon</title>
+  <desc id="desc">Blue and cyan stylised A icon.</desc>
+  <defs>
+    <linearGradient id="gradBlue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B4EA2"/>
+      <stop offset="55%" stop-color="#126BD6"/>
+      <stop offset="100%" stop-color="#1E88E5"/>
+    </linearGradient>
+    <linearGradient id="gradCyan" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00C2CB"/>
+      <stop offset="100%" stop-color="#1E88E5"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(18 45)">
+    <path d="M70 280 L210 35 L250 105 L132 312 Z" fill="url(#gradBlue)"/>
+    <path d="M210 35 L320 220 L258 219 L225 163 L250 105 Z" fill="url(#gradCyan)"/>
+    <path d="M258 219 L320 220 L365 306 L290 306 L245 226 Z" fill="url(#gradBlue)"/>
+    <path d="M198 128 L164 192 L236 192 Z" fill="#ffffff"/>
+    <path d="M78 286 C145 225, 238 190, 362 181 C300 200, 230 232, 154 288 Z" fill="#ffffff"/>
+    <path d="M82 301 C154 247, 246 213, 367 197 C309 223, 240 257, 157 313 Z" fill="url(#gradCyan)"/>
+  </g>
+</svg>

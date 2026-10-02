@@ -1,0 +1,28 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  // Static site on Workers static assets. Build first: npm run build:static
+  "name": "ampleassociates",
+  "compatibility_date": "2026-09-25",
+  "assets": {
+    "directory": "./dist",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page",
+  },
+  "env": {
+    "staging": {
+      // Deployed at https://ampleassociates-staging.<account-subdomain>.workers.dev
+      "name": "ampleassociates-staging",
+      "workers_dev": true,
+    },
+    "production": {
+      // https://ampleassociates.com. The domain's DNS zone must be on the same Cloudflare account.
+      // Deploy with: npm run deploy:production (builds with indexing allowed).
+      "name": "ampleassociates",
+      "workers_dev": false,
+      "routes": [
+        { "pattern": "ampleassociates.com", "custom_domain": true },
+        { "pattern": "www.ampleassociates.com", "custom_domain": true },
+      ],
+    },
+  },
+}

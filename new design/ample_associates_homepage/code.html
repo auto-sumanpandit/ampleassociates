@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "on-error-container": "#93000a",
+        "secondary-container": "#0073e0",
+        "inverse-on-surface": "#efefff",
+        "on-secondary": "#ffffff",
+        "surface-container-highest": "#dde1ff",
+        "primary-container": "#3d03fa",
+        "secondary-fixed-dim": "#a9c7ff",
+        "on-surface-variant": "#464557",
+        "on-primary-fixed-variant": "#3600e2",
+        "outline-variant": "#c8c4da",
+        "surface": "#fbf8ff",
+        "primary-fixed": "#e3dfff",
+        "error-container": "#ffdad6",
+        "on-error": "#ffffff",
+        "inverse-surface": "#262e52",
+        "tertiary-fixed": "#ffdbca",
+        "primary-fixed-dim": "#c5c0ff",
+        "on-tertiary-fixed": "#331200",
+        "error": "#ba1a1a",
+        "background": "#fbf8ff",
+        "on-background": "#10193c",
+        "on-tertiary-container": "#ffb185",
+        "on-secondary-container": "#fefcff",
+        "surface-variant": "#dde1ff",
+        "on-secondary-fixed-variant": "#00468c",
+        "surface-container": "#ececff",
+        "on-primary-container": "#c0bbff",
+        "on-tertiary-fixed-variant": "#763300",
+        "on-primary-fixed": "#130067",
+        "tertiary-container": "#853a00",
+        "on-secondary-fixed": "#001b3e",
+        "secondary": "#005bb3",
+        "on-primary": "#ffffff",
+        "tertiary": "#612800",
+        "surface-bright": "#fbf8ff",
+        "on-surface": "#10193c",
+        "surface-tint": "#4f33ff",
+        "on-tertiary": "#ffffff",
+        "inverse-primary": "#c5c0ff",
+        "surface-container-high": "#e4e7ff",
+        "tertiary-fixed-dim": "#ffb68e",
+        "outline": "#777589",
+        "primary": "#2b00ba",
+        "secondary-fixed": "#d6e3ff",
+        "surface-container-low": "#f3f2ff",
+        "surface-dim": "#d2d8ff"
+      },
+      "borderRadius": {
+        "DEFAULT": "1rem",
+        "lg": "2rem",
+        "xl": "3rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "gutter": "2rem",
+        "margin-mobile": "1.25rem",
+        "space-md": "1rem",
+        "space-lg": "1.75rem",
+        "gutter-mobile": "1rem",
+        "space-xs": "0.25rem",
+        "margin": "4rem",
+        "space-xl": "3rem",
+        "margin-tablet": "2.5rem",
+        "space-sm": "0.5rem"
+      },
+      "fontFamily": {
+        "label-lg": ["Poppins"],
+        "display-lg-mobile": ["Poppins"],
+        "body-lead": ["Poppins"],
+        "body-md": ["Poppins"],
+        "body-sm": ["Poppins"],
+        "headline-sm": ["Poppins"],
+        "label-sm": ["Poppins"],
+        "display-xl-mobile": ["Poppins"],
+        "headline-md": ["Poppins"],
+        "headline-lg-mobile": ["Poppins"],
+        "display-xl": ["Poppins"],
+        "headline-lg": ["Poppins"],
+        "display-lg": ["Poppins"]
+      },
+      "fontSize": {
+        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.04em", "fontWeight": "600"}],
+        "display-lg-mobile": ["34px", {"lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "300"}],
+        "body-lead": ["20px", {"lineHeight": "32px", "letterSpacing": "-0.005em", "fontWeight": "300"}],
+        "body-md": ["16px", {"lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400"}],
+        "body-sm": ["14px", {"lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400"}],
+        "headline-sm": ["22px", {"lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "600"}],
+        "label-sm": ["11px", {"lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600"}],
+        "display-xl-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "200"}],
+        "headline-md": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+        "display-xl": ["72px", {"lineHeight": "84px", "letterSpacing": "-0.03em", "fontWeight": "200"}],
+        "headline-lg": ["40px", {"lineHeight": "50px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+        "display-lg": ["56px", {"lineHeight": "68px", "letterSpacing": "-0.02em", "fontWeight": "300"}]
+      }
+    }
+  }
+}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 w-full z-50 pointer-events-none"><div class="w-full h-9 bg-secondary-container text-on-secondary flex items-center justify-between px-margin-mobile md:px-margin-tablet lg:px-margin pointer-events-auto"><span class="font-label-sm text-label-sm tracking-wider uppercase opacity-95">contact@ampleassociates.com</span><div class="flex items-center gap-space-md"><span class="font-label-sm text-label-sm tracking-wider uppercase opacity-95">investment@ampleassociates.com</span><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin mt-5 pointer-events-none"><div class="w-full h-16 bg-surface-container-lowest/90 backdrop-blur-xl rounded-full px-space-lg flex items-center justify-between pointer-events-auto border border-outline-variant/40 shadow-[0_10px_30px_-10px_rgba(11,20,55,0.08),0_20px_40px_-15px_rgba(61,3,250,0.04)]"><a class="flex items-center gap-space-sm" data-path="home" href="#"><span class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">AMPLE</span><span class="font-label-sm text-label-sm text-secondary-container tracking-widest uppercase">ASSOCIATES</span></a><nav class="hidden lg:flex items-center gap-space-md" data-active-classes="bg-surface-container-high text-primary font-semibold"><a class="px-space-md py-space-xs rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="about" href="#">About</a><a class="px-space-md py-space-xs rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="sectors" href="#">Sectors</a><a class="px-space-md py-space-xs rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="portfolio" href="#">Portfolio</a><a class="px-space-md py-space-xs rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="investors" href="#">Investors</a><a class="px-space-md py-space-xs rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-sm"><a class="bg-primary-container text-on-primary hover:bg-primary font-label-lg text-label-lg uppercase tracking-wider px-space-lg py-2.5 rounded-full transition-all shadow-[0_10px_20px_-5px_rgba(61,3,250,0.35)]" data-path="talk-to-our-team" href="#">Talk to Our Team</a></div></div></div></header><main class="w-full pt-32 bg-surface min-h-screen"><div class="flex flex-col w-full font-body-md text-on-surface antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary">
+<!-- ==========================================
+       SECTION 2: HERO "HIMALAYAN DAWN"
+       ========================================== -->
+<section class="relative w-full min-h-[92vh] bg-gradient-to-b from-surface via-surface to-surface-container-low overflow-hidden flex flex-col justify-between pt-12 pb-24">
+<!-- Ambient Sky & Map Grid (UK-to-Nepal Corridor) -->
+<div class="absolute inset-0 pointer-events-none opacity-40">
+<svg class="w-full h-full object-cover" fill="none" viewbox="0 0 1440 800" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="32" id="dotGridHero" patternunits="userSpaceOnUse" width="32" x="0" y="0">
+<circle class="text-secondary-fixed-dim" cx="3" cy="3" fill="currentColor" r="1.5"></circle>
+</pattern>
+</defs>
+<rect fill="url(#dotGridHero)" height="600" width="1440"></rect>
+</svg>
+</div>
+<!-- London & Nepal Spatial Geo Markers -->
+<div class="absolute top-28 left-[22%] hidden md:flex items-center gap-space-xs z-10 pointer-events-auto">
+<div class="w-3.5 h-3.5 rounded-full bg-primary-container ring-4 ring-primary-fixed flex items-center justify-center animate-pulse"></div>
+<div class="px-space-md py-1 bg-surface-container-lowest/80 backdrop-blur-md rounded-full shadow-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface">London</span>
+</div>
+</div>
+<div class="absolute top-44 right-[28%] hidden md:flex items-center gap-space-xs z-10 pointer-events-auto">
+<div class="w-3.5 h-3.5 rounded-full bg-primary-container ring-4 ring-primary-fixed flex items-center justify-center animate-pulse"></div>
+<div class="px-space-md py-1 bg-surface-container-lowest/80 backdrop-blur-md rounded-full shadow-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface">Nepal</span>
+</div>
+</div>
+<!-- Editorial Content Spanning Columns 1-7 -->
+<div class="max-w-[1440px] mx-auto w-full px-margin-mobile md:px-margin-tablet lg:px-margin relative z-20 mt-6">
+<div class="max-w-3xl space-y-space-lg">
+<!-- Eyebrow Pill -->
+<div class="inline-flex items-center gap-space-sm px-space-md py-1.5 rounded-full bg-surface-container-high text-on-surface">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface font-semibold">UK to Nepal Corridor</span>
+</div>
+<!-- High-Impact H1 Structure -->
+<h1 class="font-display-xl text-display-xl tracking-tight leading-[1.05] text-on-surface">
+<span class="block font-semibold">Rooted in Nepal.</span>
+<span class="block font-light text-on-surface-variant">Growing from</span>
+<span class="block font-semibold text-primary-container">London.</span>
+</h1>
+<!-- Executive Narrative -->
+<p class="font-body-lead text-body-lead text-on-surface-variant max-w-2xl font-light">
+          Ample Associates grows education, energy, property and financial ventures that serve Nepali families at home and abroad.
+        </p>
+<!-- Bespoke Actions -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-sm">
+<a class="h-14 px-space-lg bg-primary-container hover:bg-primary text-on-primary rounded-full font-label-lg text-label-lg uppercase tracking-wider flex items-center gap-space-md transition-all shadow-[0_12px_28px_-6px_rgba(61,3,250,0.4)] group" data-path="talk-to-our-team" href="#">
+<span>Talk to Our Team</span>
+<span class="w-8 h-8 rounded-full bg-surface-container-lowest text-primary-container flex items-center justify-center transition-transform group-hover:translate-x-1">
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</span>
+</a>
+<a class="h-14 px-space-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface rounded-full font-label-lg text-label-lg tracking-wider transition-colors shadow-sm flex items-center" href="#portfolio">
+            View Our Portfolio
+          </a>
+</div>
+</div>
+</div>
+<!-- Layered Mountain Silhouettes with Fishtail Machhapuchhre (Layered Flat Depth) -->
+<div class="w-full relative -mb-2 mt-auto pointer-events-none z-10">
+<svg class="w-full h-auto min-h-[220px]" fill="none" preserveaspectratio="none" viewbox="0 0 1440 280">
+<!-- Layer 1: Himalayan mist pale lavender -->
+<path class="text-surface-container-high" d="M0 280L140 180L320 220L520 140L720 200L930 110L1080 190L1260 130L1440 220V280H0Z" fill="currentColor"></path>
+<!-- Layer 2: Atmospheric sky-blue tint -->
+<path class="text-secondary-fixed-dim opacity-40" d="M0 280L180 200L380 240L640 160L820 210L980 120L1160 210L1350 170L1440 230V280H0Z" fill="currentColor"></path>
+<!-- Layer 3: Iconic Machhapuchhre (Fishtail) Peak slightly right of centre -->
+<path class="text-secondary opacity-60" d="M0 280L240 220L480 250L760 170L890 70L940 120L970 60L1080 190L1300 230L1440 260V280H0Z" fill="currentColor"></path>
+<!-- Layer 4: Foreground deep indigo foundation -->
+<path class="text-inverse-surface" d="M0 280L120 250L340 265L580 225L780 255L920 200L1060 245L1240 215L1440 260V280H0Z" fill="currentColor"></path>
+</svg>
+</div>
+</section>
+<!-- ==========================================
+       SECTION 3: STATS CARD (Overlapping Hero)
+       ========================================== -->
+<section class="w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin -mt-20 relative z-30 mb-20">
+<div class="w-full bg-surface-container-lowest rounded-xl p-8 lg:p-12 shadow-[0_24px_48px_-12px_rgba(11,20,55,0.08)] relative overflow-hidden">
+<!-- Watermark emblem in background -->
+<div class="absolute right-0 top-0 bottom-0 opacity-[0.03] pointer-events-none flex items-center justify-end pr-10">
+<span class="material-symbols-outlined text-[340px]">account_balance</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter relative z-10">
+<!-- Metric 1 -->
+<div class="flex flex-col space-y-space-xs group">
+<div class="font-display-lg text-display-lg font-semibold text-primary-container tabular-nums tracking-tight">
+<span class="counter" data-target="2004">0</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Where our journey began</span>
+<div class="w-12 h-1 bg-surface-container-high group-hover:w-full group-hover:bg-primary-container transition-all duration-500 rounded-full mt-2"></div>
+</div>
+<!-- Metric 2 -->
+<div class="flex flex-col space-y-space-xs group">
+<div class="font-display-lg text-display-lg font-semibold text-primary-container tabular-nums tracking-tight">
+<span class="counter" data-target="4500">0</span><span class="font-light">+</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Students helped</span>
+<div class="w-12 h-1 bg-surface-container-high group-hover:w-full group-hover:bg-primary-container transition-all duration-500 rounded-full mt-2"></div>
+</div>
+<!-- Metric 3 -->
+<div class="flex flex-col space-y-space-xs group">
+<div class="font-display-lg text-display-lg font-semibold text-primary-container tabular-nums tracking-tight">
+<span class="counter" data-target="5">0</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Core sectors of operation</span>
+<div class="w-12 h-1 bg-surface-container-high group-hover:w-full group-hover:bg-primary-container transition-all duration-500 rounded-full mt-2"></div>
+</div>
+<!-- Metric 4 -->
+<div class="flex flex-col space-y-space-xs group">
+<div class="font-display-lg text-display-lg font-semibold text-primary-container tabular-nums tracking-tight">
+<span class="counter" data-target="11">0</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Companies and projects</span>
+<div class="w-12 h-1 bg-surface-container-high group-hover:w-full group-hover:bg-primary-container transition-all duration-500 rounded-full mt-2"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       SECTION 4: OUR STORY (Editorial Spread)
+       ========================================== -->
+<section class="w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin py-24 relative">
+<!-- Huge outlined "01" watermark -->
+<div class="absolute -top-10 left-margin-mobile md:left-margin select-none pointer-events-none opacity-10">
+<span class="font-display-xl text-[160px] font-extralight text-on-surface" style="-webkit-text-stroke: 1.5px currentColor; -webkit-text-fill-color: transparent;">01</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter relative z-10 items-start">
+<!-- Left Column: Title -->
+<div class="lg:col-span-5 space-y-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary-container block font-semibold">Institutional Heritage</span>
+<h2 class="font-headline-lg text-headline-lg leading-tight tracking-tight text-on-surface">
+          From a <span class="text-primary-container font-semibold">Pokhara</span> office to a <span class="text-primary-container font-semibold">UK</span> and Nepal company.
+        </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Pioneering cross-border capital, resilient infrastructure, and educational mobility between Kathmandu, Pokhara, and the City of London.
+        </p>
+</div>
+<!-- Right Column: Narrative & Graphic -->
+<div class="lg:col-span-7 space-y-space-lg">
+<blockquote class="font-display-lg-mobile text-display-lg-mobile italic font-light text-on-surface leading-snug">
+          "It started with an office job in Pokhara."
+        </blockquote>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg pt-space-xs text-on-surface-variant">
+<p class="font-body-md text-body-md">
+            Beginning as an office boy at Orbit International Education in Pokhara, the ambition was never merely local. The journey required moving to the United Kingdom, mastering financial systems, and systematically forging connections with sovereign and diaspora capital.
+          </p>
+<p class="font-body-md text-body-md">
+            Today, Ample Associates represents a multi-tiered venture ecosystem. From large-scale clean hydropower generation to modern European campuses and residential developments, every project remains committed to long-term bilateral growth.
+          </p>
+</div>
+<!-- Architectural Transformation Single-Line Visual Panel -->
+<div class="w-full bg-surface-container-high rounded-lg p-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-2xl">location_city</span>
+</div>
+<div>
+<span class="font-label-lg text-label-lg text-on-surface block">Pokhara to London Bridge</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Two jurisdictions, one unified operational architecture</span>
+</div>
+</div>
+<a class="inline-flex items-center gap-space-xs font-label-lg text-label-lg text-primary-container hover:text-primary transition-colors" data-path="about" href="#">
+<span>Read our complete story</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       SECTION 5: SECTORS & COMPANIES BENTO
+       ========================================== -->
+<section class="w-full bg-inverse-surface text-inverse-on-surface py-28 relative overflow-hidden" id="portfolio">
+<!-- Huge outlined "02" watermark -->
+<div class="absolute top-10 right-margin-mobile md:right-margin select-none pointer-events-none opacity-10">
+<span class="font-display-xl text-[160px] font-extralight text-surface" style="-webkit-text-stroke: 1.5px currentColor; -webkit-text-fill-color: transparent;">02</span>
+</div>
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin relative z-10 space-y-space-xl">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed-dim block mb-space-xs font-semibold">Asset Classes &amp; Deployment</span>
+<h2 class="font-headline-lg text-headline-lg text-surface tracking-tight">
+            Five sectors, <span class="font-light text-secondary-fixed-dim">one Ample Associates.</span>
+</h2>
+</div>
+<a class="inline-flex items-center gap-space-xs text-secondary-fixed-dim hover:text-surface font-label-lg text-label-lg transition-colors" data-path="sectors" href="#">
+<span>View full portfolio</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<!-- Bento Grid (Strict 5 Cards) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter items-stretch">
+<!-- CARD 1: Education Consultancy (Span 8) -->
+<div class="lg:col-span-8 bg-on-background rounded-lg p-8 flex flex-col justify-between space-y-space-lg shadow-xl relative group">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-DEFAULT bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">school</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed-dim">Sector 01</span>
+<h3 class="font-headline-md text-headline-md text-surface font-semibold">Education Consultancy</h3>
+</div>
+</div>
+<span class="px-space-md py-1 rounded-full bg-surface-container-high/10 text-secondary-fixed-dim font-label-sm text-label-sm">Ample Associates</span>
+</div>
+<p class="font-body-md text-body-md text-outline-variant max-w-xl">
+            Counseling, compliance pathways, and international university placement empowering Nepali scholars throughout the UK, Europe, and North America.
+          </p>
+<div class="pt-space-md flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="px-3 py-1 rounded-md bg-inverse-surface text-surface text-xs font-medium tracking-wide">Orbit Education</div>
+<div class="px-3 py-1 rounded-md bg-inverse-surface text-surface text-xs font-medium tracking-wide">Global Pathway UK</div>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest/20 group-hover:bg-primary-container text-surface flex items-center justify-center transition-all group-hover:rotate-45">
+<span class="material-symbols-outlined text-[20px]">north_east</span>
+</div>
+</div>
+</div>
+<!-- CARD 2: College (Span 4, Solid White) -->
+<div class="lg:col-span-4 bg-surface-container-lowest text-on-surface rounded-lg p-8 flex flex-col justify-between space-y-space-lg shadow-xl relative group">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-DEFAULT bg-surface-container-high text-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">menu_book</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary-container">Sector 02</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">Higher Education College</h3>
+</div>
+</div>
+<span class="px-space-md py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Ample Associates</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Accredited tertiary institutions fostering practical leadership, applied technology, and cross-border commercial curricula.
+          </p>
+<div class="pt-space-md flex items-center justify-between">
+<div class="px-3 py-1 rounded-md bg-surface-container-high text-on-surface text-xs font-medium">Bespoke Campus London</div>
+<div class="w-10 h-10 rounded-full bg-surface-container group-hover:bg-primary-container group-hover:text-on-primary text-on-surface flex items-center justify-center transition-all group-hover:rotate-45">
+<span class="material-symbols-outlined text-[20px]">north_east</span>
+</div>
+</div>
+</div>
+<!-- CARD 3: Energy Sector (Span 4) -->
+<div class="lg:col-span-4 bg-on-background rounded-lg p-8 flex flex-col justify-between space-y-space-lg shadow-xl relative overflow-hidden group">
+<div class="absolute -right-12 -top-12 w-48 h-48 bg-primary-container/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex items-start justify-between relative z-10">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-DEFAULT bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">bolt</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed-dim">Sector 03</span>
+<h3 class="font-headline-md text-headline-md text-surface font-semibold">Clean Energy</h3>
+</div>
+</div>
+<span class="px-space-md py-1 rounded-full bg-surface-container-high/10 text-secondary-fixed-dim font-label-sm text-label-sm">Ample Associates</span>
+</div>
+<p class="font-body-md text-body-md text-outline-variant relative z-10">
+            Harnessing Himalayan hydro-basins to generate sustainable green megawatts for regional sovereign export.
+          </p>
+<div class="pt-space-md flex items-center justify-between relative z-10">
+<div class="px-3 py-1 rounded-md bg-inverse-surface text-surface text-xs font-medium">Mid-Marshyangdi Hydro</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest/20 group-hover:bg-primary-container text-surface flex items-center justify-center transition-all group-hover:rotate-45">
+<span class="material-symbols-outlined text-[20px]">north_east</span>
+</div>
+</div>
+</div>
+<!-- CARD 4: Property Development (Span 4, Lavender Background) -->
+<div class="lg:col-span-4 bg-surface-container-highest text-on-surface rounded-lg p-8 flex flex-col justify-between space-y-space-lg shadow-xl relative group">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-DEFAULT bg-surface-container-lowest text-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">apartment</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-semibold">Sector 04</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">Property Development</h3>
+</div>
+</div>
+<span class="px-space-md py-1 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm">Ample Associates</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Architecturally distinctive residential retreats and commercial real estate tailored for transnational comfort.
+          </p>
+<div class="pt-space-md flex items-center justify-between">
+<div class="px-3 py-1 rounded-md bg-surface-container-lowest text-on-surface text-xs font-medium">Ample Cozy Homes</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest group-hover:bg-primary-container group-hover:text-on-primary text-on-surface flex items-center justify-center transition-all group-hover:rotate-45">
+<span class="material-symbols-outlined text-[20px]">north_east</span>
+</div>
+</div>
+</div>
+<!-- CARD 5: Financial Channel (Span 4, Royal Blue Card) -->
+<div class="lg:col-span-4 bg-primary-container text-on-primary rounded-lg p-8 flex flex-col justify-between space-y-space-lg shadow-xl relative group">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-DEFAULT bg-surface-container-lowest text-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">currency_exchange</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary-fixed">Sector 05</span>
+<h3 class="font-headline-md text-headline-md text-on-primary font-semibold">Financial Channel</h3>
+</div>
+</div>
+<span class="px-space-md py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm">Ample Associates</span>
+</div>
+<p class="font-body-md text-body-md text-primary-fixed">
+            Bridging institutional liquidity, remitted diaspora savings, and sovereign funds directly into regulated real assets.
+          </p>
+<div class="pt-space-md flex items-center justify-between">
+<div class="px-3 py-1 rounded-md bg-primary text-on-primary text-xs font-medium">NRN Back 2 Nepal</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest text-primary-container group-hover:bg-primary group-hover:text-on-primary flex items-center justify-center transition-all group-hover:rotate-45">
+<span class="material-symbols-outlined text-[20px]">north_east</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       SECTION 6: FEATURED PROJECT (Ample Cozy Homes)
+       ========================================== -->
+<section class="w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin py-28 relative">
+<!-- Huge outlined "03" watermark -->
+<div class="absolute top-10 left-margin-mobile md:left-margin select-none pointer-events-none opacity-10">
+<span class="font-display-xl text-[160px] font-extralight text-on-surface" style="-webkit-text-stroke: 1.5px currentColor; -webkit-text-fill-color: transparent;">03</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center relative z-10">
+<!-- Architectural Image Container with Offset Lavender Matting -->
+<div class="lg:col-span-7 relative">
+<div class="absolute inset-0 bg-surface-container-high rounded-xl -rotate-2 transform scale-98 pointer-events-none"></div>
+<div class="relative bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_24px_48px_-12px_rgba(11,20,55,0.12)]">
+<div class="relative w-full h-[460px] bg-cover bg-center" data-alt="A modern architectural mountain villa nestled in lush green Himalayan foothills overlooking Pokhara lake with floor-to-ceiling glass, natural stone foundations, wooden louvers, cantilevered deck, and clean infinity pool under morning mountain sunlight." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAgCyHyBLJR9DSluaRny5rbZbAGaXdh5lsZg5r7K_aNLk127LnAkL6Y98Dm0YtpNQj6-9mgY6VPLNZJC8Y7TyTMC5WJoTzwfEzZdbxZSboqk9w3TuDMAl9oj1gjtvG4UNaNWMBi22zUGL_uWya-F_vnbNsf2bx7A_4qRGNdz5XnStcgncswBtIrZH4EMMbiuO14mFUvE9dOK5W31lu8ify-Zy_8n5iJlw5VXraTqUYX2bPh4D7IdY94')">
+<!-- Concept Chip -->
+<div class="absolute top-space-md left-space-md bg-surface-container-lowest/90 backdrop-blur-md px-space-md py-1 rounded-full shadow-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary-container font-semibold">Concept Image</span>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-lowest flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Design concept for Ample Cozy Homes</span>
+<span class="flex items-center gap-1 font-label-sm text-label-sm uppercase text-secondary-container">
+<span class="material-symbols-outlined text-[16px]">verified</span> Pokhara Foothills
+            </span>
+</div>
+</div>
+</div>
+<!-- Spec & Value Proposition Column -->
+<div class="lg:col-span-5 space-y-space-lg lg:pl-space-md">
+<div>
+<div class="inline-flex items-center gap-space-xs px-space-md py-1 rounded-full bg-surface-container-high text-primary-container mb-space-xs">
+<span class="material-symbols-outlined text-[16px]">domain</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">An Ample Associates project</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Ample Cozy Homes</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          An intentional collection of eco-luxury residential villas integrated into the terraced landscapes of Pokhara. Designed for trans-continental Nepali families seeking high aesthetic refinement, independent renewable energy, and panoramic vistas of the Annapurna range.
+        </p>
+<!-- Spec Data Table -->
+<div class="space-y-space-sm bg-surface-container-low p-space-md rounded-lg">
+<div class="flex items-center justify-between py-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Location</span>
+<span class="px-space-sm py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm uppercase tracking-wider">
+              [TO BE CONFIRMED]
+            </span>
+</div>
+<div class="w-full h-px bg-outline-variant/30"></div>
+<div class="flex items-center justify-between py-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Plot Size &amp; Footprint</span>
+<span class="px-space-sm py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm uppercase tracking-wider">
+              [TO BE CONFIRMED]
+            </span>
+</div>
+<div class="w-full h-px bg-outline-variant/30"></div>
+<div class="flex items-center justify-between py-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Investment Guidance</span>
+<span class="px-space-sm py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm uppercase tracking-wider">
+              [TO BE CONFIRMED]
+            </span>
+</div>
+</div>
+<div>
+<a class="h-14 px-space-lg bg-primary-container hover:bg-primary text-on-primary rounded-full font-label-lg text-label-lg uppercase tracking-wider inline-flex items-center gap-space-md transition-all shadow-[0_12px_28px_-6px_rgba(61,3,250,0.35)]" data-path="talk-to-our-team" href="#">
+<span>Talk to Our Team</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       SECTION 7: INVEST IN NEPAL (Hero Panel)
+       ========================================== -->
+<section class="w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin py-16">
+<div class="w-full rounded-xl bg-gradient-to-br from-primary via-inverse-surface to-on-background p-8 lg:p-16 text-inverse-on-surface relative overflow-hidden shadow-2xl">
+<!-- Ambient Glow Orb -->
+<div class="absolute -bottom-20 -left-20 w-80 h-80 rounded-full bg-secondary-container/20 blur-3xl pointer-events-none"></div>
+<!-- Faint decorative outline mountains in corner -->
+<div class="absolute right-0 bottom-0 opacity-15 pointer-events-none">
+<svg fill="none" height="180" viewbox="0 0 400 180" width="400">
+<path class="text-surface" d="M0 180L120 70L190 130L260 40L330 110L400 30V180H0Z" fill="currentColor"></path>
+</svg>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center relative z-10">
+<!-- Text & Invitation -->
+<div class="lg:col-span-7 space-y-space-md">
+<span class="px-space-md py-1 rounded-full bg-surface-container-high/10 text-secondary-fixed-dim font-label-sm text-label-sm uppercase tracking-widest inline-block font-semibold">
+            Sovereign Diaspora Vehicle
+          </span>
+<h3 class="font-headline-lg text-headline-lg text-surface tracking-tight">
+            NRN Back 2 Nepal Investment Company
+          </h3>
+<p class="font-body-lead text-body-lead text-outline-variant max-w-xl font-light">
+            Empowering non-resident Nepalis to participate directly in Nepal's emerging clean economy, institutional property, and financial instruments from NPR 5 lakh. Kathmandu, 2025.
+          </p>
+<div class="pt-space-xs">
+<a class="inline-flex items-center gap-space-xs text-secondary-fixed-dim hover:text-surface font-label-lg text-label-lg transition-colors" data-path="investors" href="#">
+<span>Learn about investing with Ample Associates</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Big Monumental Numeral Display -->
+<div class="lg:col-span-5 flex flex-col lg:items-end justify-center">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed-dim">Minimum Ticket Size</span>
+<div class="font-display-xl text-[64px] lg:text-[84px] leading-tight font-extralight text-surface tracking-tight">
+            NPR 5 lakh
+          </div>
+<span class="font-body-sm text-body-sm text-outline-variant text-right">Regulated capital channel for UK &amp; global diaspora</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       SECTION 8: LEADERSHIP
+       ========================================== -->
+<section class="w-full bg-surface-container-low py-28 relative">
+<!-- Huge outlined "04" watermark -->
+<div class="absolute top-10 right-margin-mobile md:right-margin select-none pointer-events-none opacity-10">
+<span class="font-display-xl text-[160px] font-extralight text-on-surface" style="-webkit-text-stroke: 1.5px currentColor; -webkit-text-fill-color: transparent;">04</span>
+</div>
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin relative z-10 space-y-space-xl">
+<div class="max-w-2xl">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary-container block mb-space-xs font-semibold">Governance &amp; Vision</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          The people behind Ample Associates
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+          Decades of cumulative institutional leadership guiding cross-border compliance, education architecture, and project delivery.
+        </p>
+</div>
+<!-- Typography & Monogram Portrait Cards (Strictly no generic stock face photos) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card 1: Samjhana Adhikari -->
+<div class="bg-surface-container-lowest rounded-lg p-8 shadow-sm flex flex-col justify-between space-y-space-lg transition-transform hover:-translate-y-1">
+<div class="space-y-space-md">
+<div class="w-20 h-20 rounded-lg bg-surface-container-highest text-primary-container flex items-center justify-center font-headline-md text-headline-md font-semibold tracking-wider">
+              SA
+            </div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Samjhana Adhikari</h3>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary-container font-semibold block mt-1">Founding Director</span>
+</div>
+</div>
+<div class="pt-space-md space-y-space-xs">
+<div class="flex flex-wrap gap-2">
+<span class="px-space-md py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Strategic Direction</span>
+<span class="px-space-md py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">UK Compliance</span>
+<span class="px-space-md py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Education Mandate</span>
+</div>
+</div>
+</div>
+<!-- Card 2: Executive Leadership -->
+<div class="bg-surface-container-lowest rounded-lg p-8 shadow-sm flex flex-col justify-between space-y-space-lg transition-transform hover:-translate-y-1">
+<div class="space-y-space-md">
+<div class="w-20 h-20 rounded-lg bg-surface-container-highest text-primary-container flex items-center justify-center font-headline-md text-headline-md font-semibold tracking-wider">
+              KP
+            </div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">[Name Confirmed via Dossier]</h3>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary-container font-semibold block mt-1">Director of Energy &amp; Infrastructure</span>
+</div>
+</div>
+<div class="pt-space-md space-y-space-xs">
+<div class="flex flex-wrap gap-2">
+<span class="px-space-md py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Hydropower Asset</span>
+<span class="px-space-md py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Grid Interconnect</span>
+<span class="px-space-md py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Capital Projects</span>
+</div>
+</div>
+</div>
+<!-- Card 3: Advisory Leadership -->
+<div class="bg-surface-container-lowest rounded-lg p-8 shadow-sm flex flex-col justify-between space-y-space-lg transition-transform hover:-translate-y-1">
+<div class="space-y-space-md">
+<div class="w-20 h-20 rounded-lg bg-surface-container-highest text-primary-container flex items-center justify-center font-headline-md text-headline-md font-semibold tracking-wider">
+              BA
+            </div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">[Name Confirmed via Dossier]</h3>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary-container font-semibold block mt-1">Managing Principal, Sovereign Advisory</span>
+</div>
+</div>
+<div class="pt-space-md space-y-space-xs">
+<div class="flex flex-wrap gap-2">
+<span class="px-space-md py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Bilateral Trade</span>
+<span class="px-space-md py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Diaspora Syndicate</span>
+<span class="px-space-md py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Asset Governance</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       SECTION 9: CLOSING CTA (Full Bleed Royal Blue)
+       ========================================== -->
+<section class="w-full bg-primary-container text-on-primary py-24 relative overflow-hidden text-center">
+<!-- Sky Dots Corridor Pattern Background -->
+<div class="absolute inset-0 pointer-events-none opacity-20">
+<svg class="w-full h-full object-cover" fill="none" viewbox="0 0 1440 400">
+<pattern height="28" id="dotGridCta" patternunits="userSpaceOnUse" width="28" x="0" y="0">
+<circle class="text-surface" cx="2" cy="2" fill="currentColor" r="1.5"></circle>
+</pattern>
+<rect fill="url(#dotGridCta)" height="400" width="1440"></rect>
+</svg>
+</div>
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin relative z-10 flex flex-col items-center space-y-space-lg">
+<h2 class="font-display-xl text-display-xl-mobile md:text-display-xl tracking-tight leading-tight">
+<span class="font-extralight block md:inline">Let's build</span>
+<span class="font-semibold block md:inline">what's next.</span>
+</h2>
+<p class="font-body-lead text-body-lead text-primary-fixed max-w-xl font-light">
+        Partner with Ample Associates across education, clean power, sustainable communities, and institutional capital.
+      </p>
+<div class="pt-space-sm">
+<a class="h-14 px-space-xl bg-surface-container-lowest hover:bg-surface text-on-surface rounded-full font-label-lg text-label-lg uppercase tracking-wider inline-flex items-center gap-space-md shadow-2xl transition-transform hover:scale-105 group" data-path="talk-to-our-team" href="#">
+<span>Talk to Our Team</span>
+<span class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center transition-transform group-hover:translate-x-1">
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</span>
+</a>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-space-md font-label-sm text-label-sm tracking-wider text-primary-fixed pt-space-md">
+<a class="hover:text-surface transition-colors" href="mailto:contact@ampleassociates.com">contact@ampleassociates.com</a>
+<span class="hidden sm:inline opacity-60">|</span>
+<a class="hover:text-surface transition-colors" href="mailto:investment@ampleassociates.com">investment@ampleassociates.com</a>
+</div>
+</div>
+</section>
+</div>
+<!-- Vanilla Interactive Counters Script -->
+<script>
+  (function initCounters() {
+    const counters = document.querySelectorAll('.counter');
+    if (!counters.length) return;
+
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const counter = entry.target;
+          const target = +counter.getAttribute('data-target');
+          const duration = 1600;
+          const startTime = performance.now();
+
+          const update = (now) => {
+            const progress = Math.min((now - startTime) / duration, 1);
+            // Ease out cubic
+            const ease = 1 - Math.pow(1 - progress, 3);
+            const current = Math.floor(ease * target);
+            counter.textContent = current.toLocaleString();
+            if (progress < 1) {
+              requestAnimationFrame(update);
+            } else {
+              counter.textContent = target.toLocaleString();
+            }
+          };
+          requestAnimationFrame(update);
+          obs.unobserve(counter);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    counters.forEach(c => observer.observe(c));
+  })();
+</script></main><footer class="w-full bg-on-background text-inverse-on-surface relative overflow-hidden"><div class="w-full absolute top-0 left-0 right-0 h-28 pointer-events-none opacity-20"><svg class="w-full h-full object-cover" fill="none" preserveaspectratio="none" viewbox="0 0 1440 120"><path class="text-secondary-fixed-dim" d="M0,120 L220,50 L380,85 L560,20 L780,95 L980,35 L1180,80 L1340,30 L1440,75 L1440,120 L0,120 Z" fill="currentColor"></path><path class="text-surface-container-highest" d="M120,120 L320,30 L520,70 L720,10 L940,65 L1140,25 L1320,60 L1440,15 L1440,120 L120,120 Z" fill="currentColor"></path></svg></div><div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin pt-24 pb-space-xl relative z-10"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter mb-space-xl"><div class="lg:col-span-4 flex flex-col justify-between pr-space-md"><div class="space-y-space-md"><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md text-surface-container-lowest font-semibold tracking-tight">AMPLE</span><span class="font-label-sm text-label-sm text-secondary-container tracking-widest uppercase">ASSOCIATES</span></div><p class="font-body-sm text-body-sm text-outline-variant max-w-sm">Sovereign capital architecture, institutional investment, and bilateral growth corridors anchoring London and Nepal.</p></div><div class="mt-space-lg"><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed-dim block mb-space-xs">Regulatory Standing</span><p class="font-body-sm text-body-sm text-outline-variant">Cross-border advisory operating within bilateral corporate and financial jurisdictional frameworks.</p></div></div><div class="lg:col-span-2 space-y-space-md"><h5 class="font-label-lg text-label-lg uppercase tracking-wider text-surface-container-lowest">Navigation</h5><ul class="space-y-space-sm font-body-sm text-body-sm text-outline-variant"><li><a class="hover:text-surface-container-lowest transition-colors" data-path="about" href="#">About Institutional Firm</a></li><li><a class="hover:text-surface-container-lowest transition-colors" data-path="sectors" href="#">Core Mandates</a></li><li><a class="hover:text-surface-container-lowest transition-colors" data-path="portfolio" href="#">Capital Deployment</a></li><li><a class="hover:text-surface-container-lowest transition-colors" data-path="investors" href="#">Sovereign LP Access</a></li><li><a class="hover:text-surface-container-lowest transition-colors" data-path="contact" href="#">Client Portal</a></li></ul></div><div class="lg:col-span-2 space-y-space-md"><h5 class="font-label-lg text-label-lg uppercase tracking-wider text-surface-container-lowest">Sectors</h5><ul class="space-y-space-sm font-body-sm text-body-sm text-outline-variant"><li><a class="hover:text-surface-container-lowest transition-colors" data-path="sectors" href="#">Clean Hydropower</a></li><li><a class="hover:text-surface-container-lowest transition-colors" data-path="sectors" href="#">Cross-Border FinTech</a></li><li><a class="hover:text-surface-container-lowest transition-colors" data-path="sectors" href="#">Digital Infrastructure</a></li><li><a class="hover:text-surface-container-lowest transition-colors" data-path="sectors" href="#">Real Assets &amp; Logistics</a></li><li><a class="hover:text-surface-container-lowest transition-colors" data-path="sectors" href="#">Sovereign Advisory</a></li></ul></div><div class="lg:col-span-2 space-y-space-md"><h5 class="font-label-lg text-label-lg uppercase tracking-wider text-surface-container-lowest">London Office</h5><p class="font-body-sm text-body-sm text-outline-variant leading-relaxed">100 Bishopsgate<br/>City of London, EC2N 4AG<br/>United Kingdom</p><p class="font-label-sm text-label-sm text-secondary-fixed-dim uppercase tracking-wider mt-space-xs">T: +44 (0) 20 7946 0920</p></div><div class="lg:col-span-2 space-y-space-md"><h5 class="font-label-lg text-label-lg uppercase tracking-wider text-surface-container-lowest">Nepal Office</h5><p class="font-body-sm text-body-sm text-outline-variant leading-relaxed">Heritage Plaza, Kamaladi<br/>Kathmandu, Bagmati<br/>Nepal</p><p class="font-label-sm text-label-sm text-secondary-fixed-dim uppercase tracking-wider mt-space-xs">T: +977 1 422 7800</p></div></div><div class="w-full h-px bg-outline-variant/20 mb-space-lg"></div><div class="flex flex-col md:flex-row items-center justify-between gap-space-md font-label-sm text-label-sm text-outline-variant"><p>© 2024 Ample Associates Ltd. All rights reserved. London &amp; Kathmandu.</p><div class="flex items-center gap-space-lg"><a class="hover:text-surface-container-lowest transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="hover:text-surface-container-lowest transition-colors" data-path="regulatory-disclosures" href="#">Regulatory Disclosures</a><a class="hover:text-surface-container-lowest transition-colors" data-path="terms-of-engagement" href="#">Terms of Engagement</a></div></div></div></footer></body></html>
