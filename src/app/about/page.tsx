@@ -68,9 +68,9 @@ export default async function AboutPage() {
   const ukCount = inCountry("United Kingdom");
 
   const facts = [
-    { label: "Pokhara", value: "2004", note: "Where the journey began, at Orbit International" },
+    { label: "Pokhara", value: "2009", note: "Ample officially began" },
     { label: "United Kingdom", value: "2010", note: "Came to the UK for further study" },
-    { label: "Students", value: "30,000+", note: "Helped by Ample International Education since 2009", accent: true },
+    { label: "Students", value: "30,000+", note: "Helped by Ample International Education to date", accent: true },
     { label: "Sectors", value: String(sectors.length), note: "From education to a financial channel" },
   ];
 
@@ -131,10 +131,10 @@ export default async function AboutPage() {
             </h2>
             <div className="mt-8 max-w-[680px] space-y-5 text-lg leading-relaxed text-ink-muted">
               <p>
-                Ample didn&rsquo;t start in a boardroom, and it didn&rsquo;t start with big money. It started in 2004,
-                when a 16-year-old called Pramod Adhikari took a job as an office boy at the Pokhara branch of Orbit
-                International Education. He earned NPR 3,000 a month, about £15, and learned something that has stayed
-                with him ever since: progress comes from discipline, sacrifice and simply keeping going.
+                Ample didn&rsquo;t start in a boardroom, and it didn&rsquo;t start with big money. Its roots go back to
+                2004, when a 16-year-old called Pramod Adhikari took a job as an office boy at the Pokhara branch of
+                Orbit International Education. He earned NPR 3,000 a month, about £15, and learned something that has
+                stayed with him ever since: progress comes from discipline, sacrifice and simply keeping going.
               </p>
               <p>
                 Four years in education consultancy taught him the work inside out. In 2009 he opened his own, and that

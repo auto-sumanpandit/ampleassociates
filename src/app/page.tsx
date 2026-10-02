@@ -38,8 +38,8 @@ export default async function HomePage() {
     .filter((g) => g.items.length > 0);
 
   const stats = [
-    { value: "2004", label: "Where our journey began, in Pokhara" },
-    { value: "30,000+", label: "Students helped since 2009" },
+    { value: "2009", label: "When Ample officially began, in Pokhara" },
+    { value: "30,000+", label: "Students helped to date" },
     { value: String(groups.length), label: "Sectors across the UK and Nepal" },
     { value: String(portfolio.length), label: "Companies and projects" },
   ];
