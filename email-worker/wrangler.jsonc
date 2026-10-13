@@ -1,0 +1,10 @@
+{
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  // Forwards mail for some @ampleassociates.com addresses to several inboxes (see index.js).
+  // Deploy with: npx wrangler deploy -c email-worker/wrangler.jsonc
+  "name": "ampleassociates-email",
+  "main": "./index.js",
+  "compatibility_date": "2026-09-25",
+  "workers_dev": false,
+  "observability": { "enabled": true },
+}
